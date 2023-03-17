@@ -14,12 +14,29 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet"> 
 
   <style>
-    body{
-      font-family: 'PT Mono', monospace;
-    }
+  
   </style>
+<script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  'event':'page_load',
+  'page_path':'/',
+  'page_name':'home'
+})
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8KTFT6');</script>
+<!-- End Google Tag Manager -->
   </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8KTFT6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="main_container">
   <div class="main_container_logo">
@@ -44,15 +61,15 @@
 
   </div>
 <div class="trackCalls">
-    <button>Newsletter Signed Up</button>
-    <button>Guide Downloaded</button>
-    <button>Signed Up</button>
-    <button>Signed In</button>
-    <button>Signed Out</button>
-    <button>Trial Started</button>
-    <button>Trial Ended</button>
-    <button>Phone Contact</button>
-    <button>Email Contact</button>
+    <input type="button" class="trackCall" value="Newsletter Signed Up"></input>
+    <input type="button" class="trackCall" value="Guide Downloaded"></input>
+    <input type="button" class="trackCall" value="Signed Up"></input>
+    <input type="button" class="trackCall" value="Signed In"></input>
+    <input type="button" class="trackCall" value="Signed Out"></input>
+    <input type="button" class="trackCall" value="Trial Started"></input>
+    <input type="button" class="trackCall" value="Trial Ended"></input>
+    <input type="button" class="trackCall" value="Phone Contact"></input>
+    <input type="button" class="trackCall" value="Email Contact"></input>
 </div>
 <div class="identifyCalls"><button></button>
   <button></button>
