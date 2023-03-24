@@ -61,17 +61,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 <div class="trackCalls">
-    <input type="button" class="trackCall" value="Newsletter Signed Up"></input>
-    <input type="button" class="trackCall" value="Guide Downloaded"></input>
-    <input type="button" class="trackCall" value="Signed Up"></input>
-    <input type="button" class="trackCall" value="Signed In"></input>
-    <input type="button" class="trackCall" value="Signed Out"></input>
-    <input type="button" class="trackCall" value="Trial Started"></input>
-    <input type="button" class="trackCall" value="Trial Ended"></input>
-    <input type="button" class="trackCall" value="Phone Contact"></input>
-    <input type="button" class="trackCall" value="Email Contact"></input>
+    <input type="button" class="trackCall" id="nl" value="Newsletter Signed Up"></input>
+    <input type="button" class="trackCall" id="gd" value="Guide Downloaded"></input>
+    <input type="button" class="trackCall" id="su" value="Signed Up"></input>
+    <input type="button" class="trackCall" id="si" value="Signed In"></input>
+    <input type="button" class="trackCall" id="so" value="Signed Out"></input>
+    <input type="button" class="trackCall" id="ts" value="Trial Started"></input>
+    <input type="button" class="trackCall" id="te" value="Trial Ended"></input>
+    <input type="button" class="trackCall" id="pc" value="Phone Contact"></input>
+    <input type="button" class="trackCall" id="ec" value="Email Contact"></input>
+
+
 </div>
-<div class="identifyCalls"><button></button>
+<div class="identifyCalls">
+  <button></button>
   <button></button>
   <button></button>
   <button></button>
