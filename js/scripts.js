@@ -14,7 +14,11 @@ var ec = document.getElementById("ec");
 
 function segmentTrack() {
     // Replace this with your own track call
-    analytics.track('Button Clicked');
+    analytics.track("Newsletter Signup",{
+      email: 'jon@doe.com',
+      type: 'header'
+    });
+    alert("newsletter track call sent");
   }
   
   function segmentIdentify() {
@@ -32,5 +36,12 @@ function segmentTrack() {
     });
   }
 
-nl.addEventListener("click", function(){alert("click1 triggered")}, false);
-el.addEventListener("click", function(){alert("click2 triggered")}, false);
+nl.addEventListener("click",segmentTrack(), false);
+gd.addEventListener("click", function(){alert("click2 triggered")}, false);
+su.addEventListener("click", function(){alert("click2 triggered")}, false);
+si.addEventListener("click", function(){alert("click2 triggered")}, false);
+so.addEventListener("click", function(){alert("click2 triggered")}, false);
+ts.addEventListener("click", function(){alert("click2 triggered")}, false);
+te.addEventListener("click", function(){alert("click2 triggered")}, false);
+pc.addEventListener("click", function(){alert("click2 triggered")}, false);
+ec.addEventListener("click", function(){alert("click2 triggered")}, false);
