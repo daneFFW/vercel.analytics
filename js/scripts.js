@@ -45,3 +45,58 @@ ts.addEventListener("click", function(){alert("click2 triggered")}, false);
 te.addEventListener("click", function(){alert("click2 triggered")}, false);
 pc.addEventListener("click", function(){alert("click2 triggered")}, false);
 ec.addEventListener("click", function(){alert("click2 triggered")}, false);
+
+
+// Set up the API endpoint and parameters
+const apiEndpoint = 'https://api.namefake.com/english-united-states/random/';
+
+// Set up the event names
+const eventNames = [
+  'Newsletter Signed Up',
+  'Guide Downloaded',
+  'Signed Up',
+  'Signed In',
+  'Signed Out',
+  'Trial Started',
+  'Trial Ended',
+  'Phone Contact',
+  'Email Contact'
+];
+
+// Get the track call buttons and add event listeners to them
+var trackCalls = document.querySelectorAll('.trackCall');
+trackCalls.forEach(trackCall => 
+  trackCall.addEventListener('click', () =>
+    // Hit the Fake Name Generator API and generate Segment calls for each fake person and event
+    fetch(`${apiEndpoint}`,{
+      mode:"cors",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      })
+          // Generate an identify call for the person
+          
+          var nameSplit = data.name.split(' ');
+
+                 // Generate a track call for the clicked event
+        analytics.track(trackCall.value, {
+            phoneNumber: data.phone,
+            emailAddress: data.email
+          });
+
+        alert("newsletter track call sent");
+
+        analytics.identify ( person.uuid, {
+            first_name: nameSplit[0],
+            last_name: nameSplit[1],
+            email: data.email,
+            phone: data.phone,
+            username: data.username
+          })
+        });
+      .catch(error => console.error(error));
+      );
