@@ -36,19 +36,19 @@ function segmentTrack() {
     });
   }
 
-nl.addEventListener("click",segmentTrack(), false);
-gd.addEventListener("click", function(){alert("click2 triggered")}, false);
-su.addEventListener("click", function(){alert("click2 triggered")}, false);
-si.addEventListener("click", function(){alert("click2 triggered")}, false);
-so.addEventListener("click", function(){alert("click2 triggered")}, false);
-ts.addEventListener("click", function(){alert("click2 triggered")}, false);
-te.addEventListener("click", function(){alert("click2 triggered")}, false);
-pc.addEventListener("click", function(){alert("click2 triggered")}, false);
-ec.addEventListener("click", function(){alert("click2 triggered")}, false);
+// nl.addEventListener("click",segmentTrack(), false);
+// gd.addEventListener("click", function(){alert("click2 triggered")}, false);
+// su.addEventListener("click", function(){alert("click2 triggered")}, false);
+// si.addEventListener("click", function(){alert("click2 triggered")}, false);
+// so.addEventListener("click", function(){alert("click2 triggered")}, false);
+// ts.addEventListener("click", function(){alert("click2 triggered")}, false);
+// te.addEventListener("click", function(){alert("click2 triggered")}, false);
+// pc.addEventListener("click", function(){alert("click2 triggered")}, false);
+// ec.addEventListener("click", function(){alert("click2 triggered")}, false);
 
 
 // Set up the API endpoint and parameters
-const apiEndpoint = 'https://api.namefake.com/english-united-states/random/';
+// const apiEndpoint = 'https://api.namefake.com/english-united-states/random/';
 
 // Set up the event names
 const eventNames = [
@@ -66,37 +66,30 @@ const eventNames = [
 // Get the track call buttons and add event listeners to them
 var trackCalls = document.querySelectorAll('.trackCall');
 trackCalls.forEach(trackCall => 
-  trackCall.addEventListener('click', () =>
+  trackCall.addEventListener('click', () =>{
     // Hit the Fake Name Generator API and generate Segment calls for each fake person and event
-    fetch(`${apiEndpoint}`,{
-      mode:"cors",
-      credentials: "same-origin",
-      headers: { "Content-Type": "application/json" },
-
+    fetch('./js/users.json',{
     })
       .then(response => response.json())
-      .then(data => {
-        console.log(data)
+      .then(json => {
+        console.log(json)
       })
           // Generate an identify call for the person
           
-          var nameSplit = data.name.split(' ');
+          // var nameSplit = data.name.split(' ');
 
                  // Generate a track call for the clicked event
-        analytics.track(trackCall.value, {
-            phoneNumber: data.phone,
-            emailAddress: data.email
-          });
+        analytics.track(trackCall.value);
 
-        alert("newsletter track call sent");
+        alert("track call sent" + trackCall.value);
 
-        analytics.identify ( person.uuid, {
-            first_name: nameSplit[0],
-            last_name: nameSplit[1],
-            email: data.email,
-            phone: data.phone,
-            username: data.username
-          })
-        });
-      .catch(error => console.error(error));
+        // analytics.identify ( person.uuid, {
+        //     first_name: nameSplit[0],
+        //     last_name: nameSplit[1],
+        //     email: data.email,
+        //     phone: data.phone,
+        //     username: data.username
+        //   })
+
+      })
       );

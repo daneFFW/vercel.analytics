@@ -5,7 +5,7 @@
   <title>Analytics Testing</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css?version=1.1">
+  <link rel="stylesheet" href="css/main.css?version=1.2">
   <link rel="stylesheet" href="">
   <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
@@ -96,5 +96,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 
 </script>
-<script src="js/scripts.js?version=1.1"></script>
+<script src="js/scripts.js?version=1.2221"></script>
 </html>
