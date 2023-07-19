@@ -27,6 +27,8 @@ dataLayer.push({
   'page_name':'home'
 })
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
+
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -59,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="main_container_intro">
     <div class="main_container_intro_title">
       <h1 class="neonText">Analytics Test Site</h1>
-      <h2 class="neonText">Testing Segment Amplitude Avo GTM</h2>
+      <h2 class="neonText">Testing Segment Amplitude Avo GTM and Vercel</h2>
     </div>
 
   </div>
